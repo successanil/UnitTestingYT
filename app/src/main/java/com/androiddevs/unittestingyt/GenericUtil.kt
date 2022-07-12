@@ -37,6 +37,24 @@ object GenericUtil {
         return flag
     }
 
+    fun nthTermOfAP(a:Int,b:Int,n:Int):Int{
+        var next = 0
+        var d = b - a
+        for(i in 1..n) {
+            next = a + ((i-1)*d)
+        }
+        return next
+    }
+
+    fun nthTermofGP(a:Int,r:Int,n:Int):Int{
+        var nextterm = 0
+        for(i in 0..n) {
+            nextterm = (a.toDouble() * Math.pow(r.toDouble(),(i-1).toDouble())).toInt()
+        }
+        return nextterm
+    }
+
+
 
 
 }
